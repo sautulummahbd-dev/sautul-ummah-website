@@ -10,6 +10,12 @@ Most public content is in:
 
 You can edit project information, gallery images, video links, stats, and member details from that file.
 
+For graphical editing, open:
+
+- `admin.html`
+
+After editing, click `Download JSON`, then replace `data/site-content.json` with the downloaded file.
+
 ## Publish With GitHub Pages
 
 1. Create a GitHub repository.

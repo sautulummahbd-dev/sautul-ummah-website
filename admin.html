@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="bn">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sautul Ummah Admin Editor</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="admin-body">
+    <main class="admin-shell">
+      <section class="admin-hero">
+        <div>
+          <p class="eyebrow">Graphical editor</p>
+          <h1>Sautul Ummah content editor</h1>
+          <p>
+            এখানে website-এর stats, projects, gallery, videos এবং members edit করে
+            updated site-content.json download করা যাবে।
+          </p>
+        </div>
+        <div class="admin-actions">
+          <a class="button secondary" href="index.html">View website</a>
+          <button class="button primary" id="downloadContent" type="button">Download JSON</button>
+        </div>
+      </section>
+
+      <form class="admin-panel" id="adminForm">
+        <section class="editor-section">
+          <div class="section-heading">
+            <p class="eyebrow">Stats</p>
+            <h2>Homepage numbers</h2>
+          </div>
+          <div class="admin-grid two">
+            <label>Members <input name="stats.members" type="text" /></label>
+            <label>Projects <input name="stats.projects" type="text" /></label>
+            <label>Families reached <input name="stats.families" type="text" /></label>
+            <label>Events <input name="stats.events" type="text" /></label>
+          </div>
+        </section>
+
+        <section class="editor-section">
+          <div class="editor-title">
+            <div>
+              <p class="eyebrow">Projects</p>
+              <h2>Project cards</h2>
+            </div>
+            <button class="button secondary" data-add="projects" type="button">Add project</button>
+          </div>
+          <div class="editor-list" id="projectsEditor"></div>
+        </section>
+
+        <section class="editor-section">
+          <div class="editor-title">
+            <div>
+              <p class="eyebrow">Gallery</p>
+              <h2>Photos</h2>
+            </div>
+            <button class="button secondary" data-add="gallery" type="button">Add photo</button>
+          </div>
+          <div class="editor-list" id="galleryEditor"></div>
+        </section>
+
+        <section class="editor-section">
+          <div class="editor-title">
+            <div>
+              <p class="eyebrow">Videos</p>
+              <h2>YouTube embeds</h2>
+            </div>
+            <button class="button secondary" data-add="videos" type="button">Add video</button>
+          </div>
+          <div class="editor-list" id="videosEditor"></div>
+        </section>
+
+        <section class="editor-section">
+          <div class="editor-title">
+            <div>
+              <p class="eyebrow">Members</p>
+              <h2>Member details</h2>
+            </div>
+            <button class="button secondary" data-add="members" type="button">Add member</button>
+          </div>
+          <div class="editor-list" id="membersEditor"></div>
+        </section>
+      </form>
+    </main>
+
+    <template id="editorCardTemplate">
+      <article class="editor-card">
+        <div class="editor-card-head">
+          <strong></strong>
+          <button type="button">Remove</button>
+        </div>
+        <div class="admin-grid"></div>
+      </article>
+    </template>
+
+    <script src="admin.js"></script>
+  </body>
+</html>

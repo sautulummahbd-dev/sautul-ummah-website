@@ -490,6 +490,127 @@ textarea {
   text-align: right;
 }
 
+.admin-body {
+  background: #f4f8f5;
+}
+
+.admin-shell {
+  width: min(1180px, calc(100% - 28px));
+  margin: 0 auto;
+  padding: 28px 0 60px;
+}
+
+.admin-hero,
+.admin-panel,
+.editor-section {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--white);
+  box-shadow: 0 12px 36px rgba(19, 35, 31, 0.08);
+}
+
+.admin-hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: clamp(22px, 4vw, 42px);
+}
+
+.admin-hero h1 {
+  margin: 0;
+  font-size: clamp(34px, 5vw, 62px);
+  line-height: 1.05;
+}
+
+.admin-hero p {
+  max-width: 720px;
+  margin: 14px 0 0;
+  color: var(--muted);
+}
+
+.admin-actions,
+.editor-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.admin-actions {
+  min-width: max-content;
+}
+
+.admin-panel {
+  display: grid;
+  gap: 18px;
+  margin-top: 18px;
+  padding: 18px;
+}
+
+.editor-section {
+  padding: clamp(18px, 3vw, 28px);
+  box-shadow: none;
+}
+
+.editor-section .section-heading {
+  margin-bottom: 18px;
+}
+
+.editor-section h2 {
+  margin: 0;
+  font-size: clamp(24px, 3vw, 36px);
+}
+
+.admin-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.admin-grid.two {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.admin-grid label {
+  display: grid;
+  gap: 7px;
+  color: var(--ink);
+  font-weight: 800;
+}
+
+.editor-list {
+  display: grid;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.editor-card {
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #f9fcfa;
+}
+
+.editor-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.editor-card-head button {
+  min-height: 38px;
+  border: 1px solid rgba(185, 77, 67, 0.28);
+  border-radius: 7px;
+  color: var(--red);
+  background: #fff6f4;
+  font-weight: 800;
+  cursor: pointer;
+}
+
 @media (max-width: 920px) {
   .nav-toggle {
     display: block;
@@ -519,7 +640,8 @@ textarea {
   .video-grid,
   .intro-grid,
   .split-section,
-  .signup-section {
+  .signup-section,
+  .admin-grid.two {
     grid-template-columns: 1fr;
   }
 
@@ -568,5 +690,12 @@ textarea {
 
   .site-footer a {
     text-align: left;
+  }
+
+  .admin-hero,
+  .admin-actions,
+  .admin-grid {
+    display: grid;
+    grid-template-columns: 1fr;
   }
 }
