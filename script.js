@@ -1,4 +1,6 @@
 const contentUrl = "data/site-content.json";
+const memberSignupEndpoint =
+  "https://script.google.com/macros/s/AKfycbzevx51kYzpigysIt9oVvjtZ3skEKy4Kr9fd9vFXImzhx_QjHEQwjtmJLPRBgLWKUMu9w/exec";
 
 const fallbackContent = {
   stats: {
@@ -132,27 +134,34 @@ function setupSignupForm() {
   const form = $("#signupForm");
   const status = $("#formStatus");
 
-  form.addEventListener("submit", (event) => {
+  form.addEventListener("submit", async (event) => {
     event.preventDefault();
     const formData = new FormData(form);
     const request = Object.fromEntries(formData.entries());
     request.submittedAt = new Date().toISOString();
 
-    const storedRequests = JSON.parse(localStorage.getItem("memberRequests") || "[]");
-    storedRequests.push(request);
-    localStorage.setItem("memberRequests", JSON.stringify(storedRequests, null, 2));
+    status.textContent = "তথ্য পাঠানো হচ্ছে...";
 
-    const file = new Blob([JSON.stringify(storedRequests, null, 2)], {
-      type: "application/json"
-    });
-    const link = document.createElement("a");
-    link.href = URL.createObjectURL(file);
-    link.download = "sautul-ummah-member-requests.json";
-    link.click();
-    URL.revokeObjectURL(link.href);
+    try {
+      if (!memberSignupEndpoint) {
+        throw new Error("Google Sheet endpoint is not configured yet.");
+      }
 
-    form.reset();
-    status.textContent = "Request saved. A JSON copy has been downloaded.";
+      await fetch(memberSignupEndpoint, {
+        method: "POST",
+        mode: "no-cors",
+        headers: {
+          "Content-Type": "text/plain;charset=utf-8"
+        },
+        body: JSON.stringify(request)
+      });
+
+      form.reset();
+      status.textContent = "আপনার আবেদন গ্রহণ করা হয়েছে।";
+    } catch (error) {
+      console.error(error);
+      status.textContent = "Submission setup এখনও সম্পূর্ণ হয়নি। পরে আবার চেষ্টা করুন।";
+    }
   });
 }
 
