@@ -39,7 +39,7 @@
         <a href="#gallery">Gallery</a>
         <a href="#videos">Videos</a>
         <a href="#members">Members</a>
-        <a href="#signup">Sign up</a>
+        <a href="signup.html">Sign up</a>
         <a class="nav-cta" href="#donate">Donate</a>
       </nav>
     </header>
@@ -55,7 +55,7 @@
             দায়িত্বশীল community initiative.
           </p>
           <div class="hero-actions">
-            <a class="button primary" href="#signup">New member sign up</a>
+            <a class="button primary" href="signup.html">সদস্য ফরম পূরণ করুন</a>
             <a class="button secondary" href="#projects">See projects</a>
           </div>
         </div>
@@ -139,97 +139,13 @@
         <div class="member-list" id="memberList"></div>
       </section>
 
-      <section class="section signup-section" id="signup">
-        <div class="signup-copy">
+      <section class="section signup-teaser" id="signup">
+        <div>
           <p class="eyebrow">Join us</p>
-          <h2>নতুন সদস্য ফরম</h2>
-          <p>
-            নিচের তথ্যগুলো পূরণ করে নিয়মাবলী পড়ে সম্মত হলে আবেদন submit করুন।
-            তথ্য Google Sheet-এ সংরক্ষণ হবে।
-          </p>
+          <h2>নতুন সদস্য হতে চান?</h2>
+          <p>সদস্য ফরম পূরণ করার জন্য আলাদা page-এ যান এবং নিয়মাবলী পড়ে আবেদন submit করুন।</p>
         </div>
-        <form class="signup-form" id="signupForm">
-          <label>
-            নাম
-            <input name="name" type="text" placeholder="আপনার নাম" required />
-          </label>
-          <label>
-            Mobile number
-            <input name="phone" type="tel" placeholder="+880..." required />
-          </label>
-          <label>
-            Email
-            <input name="email" type="email" placeholder="name@example.com" />
-          </label>
-          <label>
-            পিতার নাম
-            <input name="fatherName" type="text" placeholder="পিতার নাম" required />
-          </label>
-          <label>
-            NID number
-            <input name="nid" type="text" placeholder="NID number" />
-          </label>
-          <label>
-            শিক্ষাগত যোগ্যতা
-            <input name="education" type="text" placeholder="শিক্ষাগত যোগ্যতা" required />
-          </label>
-          <label>
-            রক্তের গ্রুপ
-            <input name="bloodGroup" type="text" placeholder="যেমন A+" />
-          </label>
-          <label>
-            পাড়া/মহল্লা
-            <input name="neighborhood" type="text" placeholder="পাড়া/মহল্লা" required />
-          </label>
-          <label>
-            গ্রাম/শহর
-            <input name="villageCity" type="text" placeholder="গ্রাম/শহর" required />
-          </label>
-          <label>
-            উপজেলা
-            <input name="upazila" type="text" placeholder="উপজেলা" required />
-          </label>
-          <label>
-            জেলা
-            <input name="district" type="text" placeholder="জেলা" required />
-          </label>
-          <label>
-            আগ্রহের ক্ষেত্র
-            <select name="interest" required>
-              <option value="">নির্বাচন করুন</option>
-              <option>শিক্ষা সহায়তা</option>
-              <option>মানবিক সেবা</option>
-              <option>মিডিয়া টিম</option>
-              <option>ইভেন্ট ব্যবস্থাপনা</option>
-              <option>সাধারণ স্বেচ্ছাসেবক</option>
-            </select>
-          </label>
-          <label class="full">
-            পূর্ণ ঠিকানা
-            <textarea name="address" rows="3" placeholder="পূর্ণ ঠিকানা" required></textarea>
-          </label>
-          <label class="full">
-            সংক্ষিপ্ত বার্তা
-            <textarea name="message" rows="3" placeholder="আপনি কীভাবে কাজ করতে চান?"></textarea>
-          </label>
-          <div class="rules-box full">
-            <h3>সংক্ষিপ্ত নিয়মাবলী</h3>
-            <ul>
-              <li>ইসলামিক সকল ফরজ বিধান অবশ্যই পালন করিব এবং নিষিদ্ধ কাজ থেকে নিজেকে বিরত রাখিব।</li>
-              <li>সংগঠনের সকল আলোচনা সভায় নিজ দায়িত্বে ও যথাসময়ে উপস্থিত থাকিব।</li>
-              <li>সমাজের কল্যাণমূলক সকল কাজে প্রত্যক্ষ ও পরোক্ষভাবে অংশগ্রহণ করিব।</li>
-              <li>যেকোনো ধরনের অন্যায়মূলক কাজ থেকে নিজেকে বিরত রাখিব।</li>
-              <li>সংগঠন থেকে দেওয়া সকল দায়িত্ব পরিপূর্ণভাবে ও স্বচ্ছতার সাথে পালন করিব।</li>
-              <li>সংগঠনের যেকোনো ধরনের সিদ্ধান্ত সম্মিলিতভাবে বাস্তবায়ন করিব।</li>
-            </ul>
-          </div>
-          <label class="consent-check full">
-            <input name="rulesAgreement" type="checkbox" value="হ্যাঁ" required />
-            আমি নিয়মাবলী পড়ে সম্মত হলাম এবং স্বজ্ঞানে ও স্বেচ্ছায় অঙ্গীকার করিতেছি যে সংগঠনের সকল নিয়মাবলী পালন করিব।
-          </label>
-          <button class="button primary full" type="submit">Submit request</button>
-          <p class="form-status" id="formStatus" role="status"></p>
-        </form>
+        <a class="button primary" href="signup.html">সদস্য ফরম পূরণ করুন</a>
       </section>
 
       <section class="section donate-section" id="donate">
@@ -293,6 +209,6 @@
       </article>
     </template>
 
-    <script src="script.js?v=2"></script>
+    <script src="script.js?v=3"></script>
   </body>
 </html>

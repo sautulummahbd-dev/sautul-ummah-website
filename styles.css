@@ -415,6 +415,37 @@ a {
   color: var(--white);
 }
 
+.signup-teaser {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22px;
+  flex-wrap: wrap;
+  background: var(--green);
+  color: var(--white);
+}
+
+.signup-teaser h2 {
+  margin: 0;
+}
+
+.signup-teaser p {
+  max-width: 720px;
+  margin: 12px 0 0;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 18px;
+}
+
+.standalone-signup {
+  min-height: calc(100vh - 73px);
+}
+
+.standalone-signup .signup-copy h1 {
+  margin: 0;
+  font-size: clamp(36px, 6vw, 72px);
+  line-height: 1.05;
+}
+
 .signup-section .eyebrow,
 .signup-section p {
   color: rgba(255, 255, 255, 0.82);

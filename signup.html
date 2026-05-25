@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="bn">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Sautul Ummah member signup form." />
+    <title>সদস্য ফরম - Sautul Ummah</title>
+    <link rel="stylesheet" href="styles.css?v=3" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Sautul Ummah home">
+        <img
+          class="brand-logo"
+          src="public/sautul-ummah-logo.png"
+          alt="Sautul Ummah logo"
+          width="44"
+          height="44"
+          style="width: 44px; height: 44px; max-width: 44px; flex: 0 0 44px; object-fit: cover;"
+        />
+        <span>
+          <strong>Sautul Ummah</strong>
+          <small>শিক্ষা, সেবা, দাওয়াহ</small>
+        </span>
+      </a>
+
+      <nav class="site-nav signup-page-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#gallery">Gallery</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="section signup-section standalone-signup" id="signup">
+        <div class="signup-copy">
+          <p class="eyebrow">Member form</p>
+          <h1>নতুন সদস্য ফরম</h1>
+          <p>সঠিক তথ্য দিয়ে ফরম পূরণ করুন। Submit করার আগে নিয়মাবলী পড়ে সম্মতি দিন।</p>
+        </div>
+        <form class="signup-form" id="signupForm">
+          <label>
+            নাম
+            <input name="name" type="text" placeholder="আপনার নাম" required />
+          </label>
+          <label>
+            Mobile number
+            <input name="phone" type="tel" placeholder="+880..." required />
+          </label>
+          <label>
+            Email
+            <input name="email" type="email" placeholder="name@example.com" />
+          </label>
+          <label>
+            পিতার নাম
+            <input name="fatherName" type="text" placeholder="পিতার নাম" required />
+          </label>
+          <label>
+            NID number
+            <input name="nid" type="text" placeholder="NID number" />
+          </label>
+          <label>
+            শিক্ষাগত যোগ্যতা
+            <input name="education" type="text" placeholder="শিক্ষাগত যোগ্যতা" required />
+          </label>
+          <label>
+            রক্তের গ্রুপ
+            <input name="bloodGroup" type="text" placeholder="যেমন A+" />
+          </label>
+          <label>
+            পাড়া/মহল্লা
+            <input name="neighborhood" type="text" placeholder="পাড়া/মহল্লা" required />
+          </label>
+          <label>
+            গ্রাম/শহর
+            <input name="villageCity" type="text" placeholder="গ্রাম/শহর" required />
+          </label>
+          <label>
+            উপজেলা
+            <input name="upazila" type="text" placeholder="উপজেলা" required />
+          </label>
+          <label>
+            জেলা
+            <input name="district" type="text" placeholder="জেলা" required />
+          </label>
+          <label>
+            আগ্রহের ক্ষেত্র
+            <select name="interest" required>
+              <option value="">নির্বাচন করুন</option>
+              <option>শিক্ষা সহায়তা</option>
+              <option>মানবিক সেবা</option>
+              <option>মিডিয়া টিম</option>
+              <option>ইভেন্ট ব্যবস্থাপনা</option>
+              <option>সাধারণ স্বেচ্ছাসেবক</option>
+            </select>
+          </label>
+          <label class="full">
+            পূর্ণ ঠিকানা
+            <textarea name="address" rows="3" placeholder="পূর্ণ ঠিকানা" required></textarea>
+          </label>
+          <label class="full">
+            সংক্ষিপ্ত বার্তা
+            <textarea name="message" rows="3" placeholder="আপনি কীভাবে কাজ করতে চান?"></textarea>
+          </label>
+          <div class="rules-box full">
+            <h2>সংক্ষিপ্ত নিয়মাবলী</h2>
+            <ul>
+              <li>ইসলামিক সকল ফরজ বিধান অবশ্যই পালন করিব এবং নিষিদ্ধ কাজ থেকে নিজেকে বিরত রাখিব।</li>
+              <li>সংগঠনের সকল আলোচনা সভায় নিজ দায়িত্বে ও যথাসময়ে উপস্থিত থাকিব।</li>
+              <li>সমাজের কল্যাণমূলক সকল কাজে প্রত্যক্ষ ও পরোক্ষভাবে অংশগ্রহণ করিব।</li>
+              <li>যেকোনো ধরনের অন্যায়মূলক কাজ থেকে নিজেকে বিরত রাখিব।</li>
+              <li>সংগঠন থেকে দেওয়া সকল দায়িত্ব পরিপূর্ণভাবে ও স্বচ্ছতার সাথে পালন করিব।</li>
+              <li>সংগঠনের যেকোনো ধরনের সিদ্ধান্ত সম্মিলিতভাবে বাস্তবায়ন করিব।</li>
+            </ul>
+          </div>
+          <label class="consent-check full">
+            <input name="rulesAgreement" type="checkbox" value="হ্যাঁ" required />
+            আমি নিয়মাবলী পড়ে সম্মত হলাম এবং স্বজ্ঞানে ও স্বেচ্ছায় অঙ্গীকার করিতেছি যে সংগঠনের সকল নিয়মাবলী পালন করিব।
+          </label>
+          <button class="button primary full" type="submit">Submit request</button>
+          <p class="form-status" id="formStatus" role="status"></p>
+        </form>
+      </section>
+    </main>
+
+    <script src="script.js?v=3"></script>
+  </body>
+</html>

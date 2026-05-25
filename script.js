@@ -39,6 +39,7 @@ function renderStats(stats) {
 function renderProjects(projects) {
   const grid = $("#projectGrid");
   const template = $("#projectTemplate");
+  if (!grid || !template) return;
   grid.replaceChildren();
 
   projects.forEach((project) => {
@@ -56,6 +57,7 @@ function renderProjects(projects) {
 function renderGallery(items) {
   const grid = $("#galleryGrid");
   const template = $("#galleryTemplate");
+  if (!grid || !template) return;
   grid.replaceChildren();
 
   items.forEach((item) => {
@@ -71,6 +73,7 @@ function renderGallery(items) {
 function renderVideos(videos) {
   const grid = $("#videoGrid");
   const template = $("#videoTemplate");
+  if (!grid || !template) return;
   grid.replaceChildren();
 
   videos.forEach((video) => {
@@ -99,6 +102,7 @@ function renderVideos(videos) {
 function renderMembers(members) {
   const list = $("#memberList");
   const template = $("#memberTemplate");
+  if (!list || !template) return;
   list.replaceChildren();
 
   members.forEach((member) => {
@@ -116,6 +120,7 @@ function renderMembers(members) {
 function setupNavigation() {
   const button = $(".nav-toggle");
   const nav = $(".site-nav");
+  if (!button || !nav) return;
 
   button.addEventListener("click", () => {
     const isOpen = nav.classList.toggle("is-open");
@@ -133,6 +138,7 @@ function setupNavigation() {
 function setupSignupForm() {
   const form = $("#signupForm");
   const status = $("#formStatus");
+  if (!form || !status) return;
 
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
