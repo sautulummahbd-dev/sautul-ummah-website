@@ -60,15 +60,13 @@ a {
   min-width: max-content;
 }
 
-.brand-mark {
-  display: grid;
+.brand-logo {
   width: 44px;
   height: 44px;
-  place-items: center;
   border-radius: 8px;
-  color: var(--white);
-  background: var(--green);
-  font-weight: 800;
+  object-fit: cover;
+  object-position: center;
+  box-shadow: 0 4px 14px rgba(19, 35, 31, 0.2);
 }
 
 .brand strong,
